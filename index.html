@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles/normalize.css">
+	<link rel="stylesheet" href="./styles/styles.css">
+	<script src="./scripts/script.js" defer></script>
+	<title>Education form (Quiz form)</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- https://www.youtube.com/watch?v=VdqtdKXxKhM -->
+		<header>
+			<h1>Student Card</h1>
+			<p>Provide your information to take part in the educational program.</p>
+		</header>
+
+		<div class="progress-bar">
+
+		</div>
+
+		<form data-multi-step>
+
+			<div data-step="1" class="card">
+
+				<div class="card-item">
+					<label for="name">Name</label>
+					<input type="text" id="name" placeholder="Eter your name...">
+				</div>
+
+				<div class="card-item">
+					<label for="surname">Surname</label>
+					<input type="text" id="surname" placeholder="Eter your surname...">
+				</div>
+
+				<div class="card-item">
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="Eter your email...">
+				</div>
+
+				<div class="card-item">
+					<label for="birthday">Birthday</label>
+					<input type="date" id="birthday" placeholder="Eter your birthday...">
+				</div>
+
+				<button type="button">Next</button>
+			</div>
+
+			<div data-step="2" class="card">
+
+				<div class="card-item">
+					<label for="diplomaScore">Write your high school diploma score</label>
+					<input type="number" id="diplomaScore" min="5" max="20" placeholder="Eter number from 5 to 20">
+				</div>
+
+				<div class="card-item">
+					<label for="diplomaYear">Year of graduation</label>
+					<input type="number" id="diplomaYear" min="1980" max="2023"
+						placeholder="Eter year of graduation from 1980 to 2023">
+				</div>
+
+				<div class="card-item">
+					<label for="suburbs">Enter your suburb</label>
+					<select>
+						<option value="Attica">Attica</option>
+						<option value="Central Greece">Central Greece</option>
+						<option value="Central Macedonia">Central Macedonia</option>
+						<option value="Crete">Crete</option>
+						<option value="Eastern Macedonia and Thrace">Eastern Macedonia and Thrace</option>
+						<option value="Epirus">Epirus</option>
+						<option value="Ionian Islands">Ionian Islands</option>
+						<option value="North Aegean">North Aegean</option>
+						<option value="Peloponnese">Peloponnese</option>
+						<option value="South Aegean">South Aegean</option>
+						<option value="Thessaly">Thessaly</option>
+						<option value="Western Greece">Western Greece</option>
+						<option value="Western Macedonia">Western Macedonia</option>
+					</select>
+				</div>
+
+				<div class="nav-btns">
+					<button type="button">Prev</button>
+					<button type="button">Next</button>
+				</div>
+			</div>
+
+			<div data-step="3" class="card">
+
+
+				<div class="nav-btns">
+					<button type="button">Prev</button>
+					<button type="submit">Submit</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+</body>
+
+</html>

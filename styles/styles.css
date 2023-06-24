@@ -1,0 +1,56 @@
+.container {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 auto;
+	color: rgb(31, 134, 182);
+	font: 600 14px Arial;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.card-item {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.card-item label {
+	text-transform: uppercase;
+}
+
+.card button,
+.card-item input,
+.card-item select {
+	border-radius: .5em;
+	border: 2px solid rgb(93, 221, 200);
+	padding: 10px;
+}
+
+.card button {
+	width: 35%;
+	margin: 15px auto;
+	background-color: transparent;
+	transition: .3s ease-in-out;
+	text-transform: uppercase;
+}
+
+.card button:hover {
+	background-color: rgb(93, 221, 200);
+}
+
+.nav-btns {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	gap: 10px;
+}
+
+.nav-btns button {
+	width: 45%;
+}
