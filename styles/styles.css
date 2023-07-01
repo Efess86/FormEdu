@@ -8,7 +8,23 @@
 	font: 600 14px Arial;
 }
 
+.progress-bar {
+	width: 0;
+	height: 10px;
+	background-color: #2196F3;
+	margin-top: 10px;
+	transition: width 0.3s;
+}
+
 .card {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.card-content {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
