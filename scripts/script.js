@@ -1,4 +1,5 @@
-import { validateInput } from "./validation.js";
+import { validateInput } from "./validateInput.js";
+import { displayErrors } from "./displayErrors.js";
 
 const cards = document.querySelectorAll('.card');
 const nextButtons = document.querySelectorAll('.nextBtn');
@@ -27,15 +28,21 @@ function showPrevCard() {
 	}
 }
 
+nextButtons.forEach((button, index) => {
+	button.addEventListener('click', (event) => {
+		let invalidInputs = validateInput(cards[index]);
 
-nextButtons.forEach(button => {
-	button.addEventListener('click', () => {
-		if (validateInput()) {
+		if (invalidInputs.length === 0) {
 			showNextCard();
+		} else {
+			event.preventDefault();
+			displayErrors(invalidInputs);
 		}
 	});
 });
+
 prevButtons.forEach(button => {
 	button.addEventListener('click', showPrevCard);
 });
+
 cards[currentCard].style.display = 'block';
