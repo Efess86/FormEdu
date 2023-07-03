@@ -1,5 +1,5 @@
 .container {
-	width: 80%;
+	width: 60%;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -69,4 +69,21 @@
 
 .nav-btns button {
 	width: 45%;
+}
+
+.validation-error {
+	opacity: 0;
+	color: red;
+	font: 400 16px Arial;
+	transition: .3s ease-in-out;
+}
+
+.error-active {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 690px) {
+	.container {
+		width: 90%;
+	}
 }

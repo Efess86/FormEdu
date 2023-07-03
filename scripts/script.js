@@ -1,3 +1,5 @@
+import { validateInput } from "./validation.js";
+
 const cards = document.querySelectorAll('.card');
 const nextButtons = document.querySelectorAll('.nextBtn');
 const prevButtons = document.querySelectorAll('.prevBtn');
@@ -27,7 +29,11 @@ function showPrevCard() {
 
 
 nextButtons.forEach(button => {
-	button.addEventListener('click', showNextCard);
+	button.addEventListener('click', () => {
+		if (validateInput()) {
+			showNextCard();
+		}
+	});
 });
 prevButtons.forEach(button => {
 	button.addEventListener('click', showPrevCard);
