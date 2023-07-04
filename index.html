@@ -19,32 +19,33 @@
 			<p>Provide your information to take part in the educational program.</p>
 		</header>
 		<div class="progress-bar">
+			<div class="progress-bar-fill"></div>
 		</div>
 
 		<form>
 
 			<div class="card">
-				<h2>Stage 1</h2>
+				<h2>Personal info</h2>
 				<div class="card-content">
 					<div class="card-item">
 						<label for="name">Name</label>
-						<input type="text" id="name" placeholder="Eter your name..." required>
+						<input type="text" id="name" placeholder="Enter your name..." required>
 						<span class="validation-error">Name cannot be empty</span>
 					</div>
 					<div class="card-item">
 						<label for="surname">Surname</label>
-						<input type="text" id="surname" placeholder="Eter your surname..." required>
+						<input type="text" id="surname" placeholder="Enter your surname..." required>
 						<span class="validation-error">Surname cannot be empty</span>
 					</div>
 					<div class="card-item">
 						<label for="email">Email</label>
-						<input type="email" id="email" placeholder="Eter your email..." required>
+						<input type="email" id="email" placeholder="Enter your email..." required>
 						<span class="validation-error">The email should not be empty and must be in the form
 							sample@sample.com</span>
 					</div>
 					<div class="card-item">
 						<label for="birthday">Birthday</label>
-						<input type="date" id="birthday" placeholder="Eter your birthday..." min="1980-01-01"
+						<input type="date" id="birthday" placeholder="Enter your birthday..." min="1980-01-01"
 							max="2004-12-31" required>
 						<span class="validation-error">Error please check your birthday</span>
 					</div>
@@ -53,12 +54,12 @@
 			</div>
 			<!-- ================================ -->
 			<div class="card">
-				<h2>Stage 2</h2>
+				<h2>Diploma info</h2>
 				<div class="card-content">
 
 					<div class="card-item">
 						<label for="diplomaScore">Write your high school diploma score</label>
-						<input type="number" id="diplomaScore" min="5" max="20" placeholder="Eter number from 5 to 20"
+						<input type="number" id="diplomaScore" min="5" max="20" placeholder="Enter number from 5 to 20"
 							required>
 						<span class="validation-error">Error please check your diploma score. Min 5 and max 20</span>
 
@@ -67,7 +68,7 @@
 					<div class="card-item">
 						<label for="diplomaYear">Year of graduation</label>
 						<input type="number" id="diplomaYear" min="1980" max="2023"
-							placeholder="Eter year of graduation from 1980 to 2023" required>
+							placeholder="Enter year of graduation from 1980 to 2023" required>
 						<span class="validation-error">Error please check your diploma graduation year. Must be from
 							1980 to 2023</span>
 					</div>
@@ -99,11 +100,42 @@
 			</div>
 			<!-- ================================ -->
 			<div class="card">
-				<h2>Stage 3</h2>
+				<h2>Recommendation Letter Information</h2>
+				<div class="card-content">
+
+					<div class="card-item">
+						<label for="refereeName">Referee's Full Name</label>
+						<input type="text" id="refereeName" name="refereeName" required>
+						<span class="validation-error">Error please check your Referee's Full Name</span>
+					</div>
+
+					<div class="card-item">
+						<label for="refereePosition">Referee's Position</label>
+						<select id="refereePosition" name="refereePosition" required>
+							<option value="">--Please choose an option--</option>
+							<option value="teacher">Teacher</option>
+							<option value="professor">Professor</option>
+							<option value="employer">Employer</option>
+							<option value="coach">Coach</option>
+							<option value="other">Other</option>
+						</select>
+						<span class="validation-error">Error please check your Referee's Full Name</span>
+					</div>
+					<div class="nav-btns">
+						<button type="button" class="prevBtn">Prev</button>
+						<button type="button" class="nextBtn">Next</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- ================================ -->
+			<div class="card">
+				<h2>Educational program</h2>
 				<div class="card-content">
 					<div class="card-item">
 						<label for="suburbs">Select educational program.</label>
 						<select>
+							<option value="">--Please choose an option--</option>
 							<option value="Methematics">Methematics</option>
 							<option value="Chemistry">Chemistry</option>
 							<option value="Physics">Physics</option>
@@ -113,12 +145,24 @@
 							<option value="Science">Science</option>
 						</select>
 					</div>
+					<div class="card-item">
+						<h3>Choose educational hours</h3>
+						<input type="radio" id="morning" name="edu-hours" value="option1">
+						<label for="morning">Morning</label><br>
+
+						<input type="radio" id="afternoon" name="edu-hours" value="option2">
+						<label for="afternoon">Afternoon</label><br>
+
+						<input type="radio" id="other-hours" name="edu-hours" value="option3">
+						<label for="other-hours">Other hours</label>
+					</div>
 					<div class="nav-btns">
 						<button type="button" class="prevBtn">Prev</button>
 						<button type="submit">Submit</button>
 					</div>
 				</div>
-
+				<label for="terms">I agree to the Terms and Conditions</label>
+				<input type="checkbox" id="terms" name="terms">
 			</div>
 			<!-- ================================ -->
 
