@@ -42,13 +42,17 @@
 
 .card button,
 .card-item input,
-.card-item select {
+.card-item select,
+.eraseData,
+.eraseAllData {
 	border-radius: .5em;
 	border: 2px solid rgb(93, 221, 200);
 	padding: 10px;
 }
 
-.card button {
+.card button,
+.eraseData,
+.eraseAllData {
 	width: 35%;
 	margin: 15px auto;
 	background-color: transparent;
@@ -56,7 +60,9 @@
 	text-transform: uppercase;
 }
 
-.card button:hover {
+.card button:hover,
+.eraseData:hover,
+.eraseAllData:hover {
 	background-color: rgb(93, 221, 200);
 }
 
@@ -71,11 +77,17 @@
 	width: 45%;
 }
 
+.eraseBtns {
+	display: flex;
+}
+
 .validation-error {
 	opacity: 0;
 	color: red;
 	font: 400 16px Arial;
 	transition: .3s ease-in-out;
+	user-select: none;
+	cursor: unset;
 }
 
 .error-active {

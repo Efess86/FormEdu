@@ -8,4 +8,4 @@ export function validateInput(currentCard) {
 		}
 	});
 	return invalidInputs;
-}
+};

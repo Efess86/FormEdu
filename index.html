@@ -13,14 +13,12 @@
 
 <body>
 	<div class="container">
-		<!-- https://www.youtube.com/watch?v=VdqtdKXxKhM -->
+
 		<header>
 			<h1>Student Card</h1>
 			<p>Provide your information to take part in the educational program.</p>
 		</header>
-
 		<div class="progress-bar">
-
 		</div>
 
 		<form>
@@ -31,13 +29,12 @@
 					<div class="card-item">
 						<label for="name">Name</label>
 						<input type="text" id="name" placeholder="Eter your name..." required>
-						<span class="validation-error">Name cannot be empty and must have at least 2 characters</span>
+						<span class="validation-error">Name cannot be empty</span>
 					</div>
 					<div class="card-item">
 						<label for="surname">Surname</label>
 						<input type="text" id="surname" placeholder="Eter your surname..." required>
-						<span class="validation-error">Surname cannot be empty and must have at least 2
-							characters</span>
+						<span class="validation-error">Surname cannot be empty</span>
 					</div>
 					<div class="card-item">
 						<label for="email">Email</label>
@@ -47,7 +44,8 @@
 					</div>
 					<div class="card-item">
 						<label for="birthday">Birthday</label>
-						<input type="date" id="birthday" placeholder="Eter your birthday..." required>
+						<input type="date" id="birthday" placeholder="Eter your birthday..." min="1980-01-01"
+							max="2004-12-31" required>
 						<span class="validation-error">Error please check your birthday</span>
 					</div>
 					<button type="button" class="nextBtn">Next</button>
@@ -123,7 +121,12 @@
 
 			</div>
 			<!-- ================================ -->
+
 		</form>
+		<div class="eraseBtns">
+			<button class="eraseAllData">Erase all data</button>
+			<button class="eraseData">Erase current data</button>
+		</div>
 	</div>
 
 </body>
