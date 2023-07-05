@@ -10,6 +10,7 @@ const eraseCurrentBtn = document.querySelector('.eraseData');
 
 let currentCard = 0;
 
+updateProgressBar((1 / cards.length) * 100); // initialize first card progress bar
 
 function showNextCard() {
 	cards[currentCard].style.display = 'none';
