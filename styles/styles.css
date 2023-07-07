@@ -13,6 +13,7 @@
 	background-color: #f3f3f3;
 	border-radius: 5px;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+	border: 1px solid rgb(212, 212, 212);
 }
 
 .progress-bar-fill {

@@ -5,8 +5,8 @@ import { updateProgressBar } from "./updateProgressBar.js";
 const cards = document.querySelectorAll('.card');
 const nextButtons = document.querySelectorAll('.nextBtn');
 const prevButtons = document.querySelectorAll('.prevBtn');
-const eraseAllBtn = document.querySelector('.eraseAllData');
-const eraseCurrentBtn = document.querySelector('.eraseData');
+const eraseAllDataBtn = document.querySelector('.eraseAllData');
+const eraseCurrentDataBtn = document.querySelector('.eraseData');
 
 let currentCard = 0;
 
@@ -38,7 +38,7 @@ function showPrevCard() {
 	updateProgressBar(progress);
 }
 
-eraseCurrentBtn.addEventListener('click', () => {
+eraseCurrentDataBtn.addEventListener('click', () => {
 	const inputs = Array.from(document.querySelectorAll('input')); // return array not nodeList to use every() method
 	const allEmpty = inputs.every(input => input.value == '');
 	if (!allEmpty) {
@@ -55,7 +55,7 @@ eraseCurrentBtn.addEventListener('click', () => {
 	};
 });
 
-eraseAllBtn.addEventListener('click', () => {
+eraseAllDataBtn.addEventListener('click', () => {
 	const conf = confirm("Are you sure you want to delete data from current card?");
 	if (conf) {
 		const inputs = document.querySelectorAll('input');
